@@ -46,7 +46,7 @@ namespace CleanArchMvc.Domain.Entities
 
             DomainExceptionValidation.When(stock < 0, "Invalid stock value");
 
-            DomainExceptionValidation.When(image.Length < 250,
+            DomainExceptionValidation.When(image?.Length < 250,
                "Invalid name. Too Short, minimum 250 characters");
 
             Name = name;
@@ -56,7 +56,7 @@ namespace CleanArchMvc.Domain.Entities
             Image = image;
 
         }
-        public int Categoryid { get; set; }
+        public int CategoryId { get; set; }
         public Category Category { get; set; }
     }
 }
