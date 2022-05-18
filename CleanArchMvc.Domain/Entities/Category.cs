@@ -3,9 +3,8 @@ using System.Collections.Generic;
 
 namespace CleanArchMvc.Domain.Entities
 {
-    public class Category
+    public class Category : Entity
     {
-        public int Id { get; private set; }
         public string Name { get; private set; }
 
         public Category(string name)
@@ -34,6 +33,7 @@ namespace CleanArchMvc.Domain.Entities
 
             DomainExceptionValidation.When(name.Length < 3,
                 "Invalid name. Too Short, minimum 3 characters");
+
 
             Name = name;
         }
