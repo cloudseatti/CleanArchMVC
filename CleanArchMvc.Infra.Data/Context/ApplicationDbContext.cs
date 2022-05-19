@@ -15,7 +15,7 @@ namespace CleanArchMvc.Infra.Data.Context
         { }
 
         public DbSet<Category> Categories { get; set; }
-        public DbSet<Product> Producties { get; set; }
+        public DbSet<Product> Products { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
